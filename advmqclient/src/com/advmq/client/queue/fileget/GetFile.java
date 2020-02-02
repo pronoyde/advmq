@@ -49,7 +49,7 @@ public class GetFile {
 		FileOutputStream fileOutputStream=null;
 		int count =0;
 		int byteCount=0;
-		System.out.println(fileCount);
+		
 		file = new File(directoryPath+(++partFileCount));
 		fileOutputStream = new FileOutputStream(file);
 		int startPartFile=1;
@@ -72,10 +72,10 @@ public class GetFile {
 						
 						String outputFile = "/home/pronoyde/Desktop/"+queueStatusArray[tempFileCount++].split("!")[1].split(":")[1]; 
 						String partFiles = "/home/pronoyde/Desktop/receivedFiles/";
-						System.out.println("here");
+						
 					
-						new GenerateFIle().generateFile(outputFile, partFiles, startPartFile, endPartFile);
-							  System.out.println("after"); 
+						new GenerateFile().generateFile(outputFile, partFiles, startPartFile, endPartFile);
+							  
 							  startPartFile=endPartFile+1;
 							  
 					}
